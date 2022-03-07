@@ -34,7 +34,7 @@ public class ThreadTelegramCall extends TimerTask {
                     out.write(xml);
                     out.close();
                     XmlParser parser = new XmlParser();
-                    if (parser.checkCity("posto.xml")) {
+                    if (parser.checkCityFile("posto.xml")) {
                         parser.insertCity("posto.xml", result[0]);
                         api.sendMessage(result[i].getMessage().getChat().getId(), "Località inserita!");
                     } else {

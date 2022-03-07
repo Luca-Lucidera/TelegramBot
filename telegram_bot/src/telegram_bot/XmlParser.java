@@ -29,7 +29,7 @@ public class XmlParser {
     public XmlParser() {
     }
 
-    public boolean checkCity(String path) throws ParserConfigurationException, SAXException, IOException {
+    public boolean checkCityFile(String path) throws ParserConfigurationException, SAXException, IOException {
         NodeList placeList = getDocumentFromFile(path, "place");
         Node nodo = placeList.item(0); //vado a prendere il primo elemento
         Element element = (Element) nodo;

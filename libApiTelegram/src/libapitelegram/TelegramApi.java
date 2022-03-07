@@ -62,12 +62,14 @@ public class TelegramApi {
 
     //restituisce l'oggetto message presente nel json
     public Message getMessageJSON(JSONObject json) {
+        int indexofText = json.getString("text").indexOf(" ");
+        String text = json.getString("text").substring(indexofText+1);
         Message message = new Message(
                 json.getInt("message_id"),
                 getFromJSON(json.getJSONObject("from")),
                 getChatJSON(json.getJSONObject("chat")),
                 json.getInt("date"),
-                json.getString("text")
+                text
         );
         return message;
     }
