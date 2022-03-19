@@ -18,6 +18,10 @@ public class Message {
     private int date;
     private String text;
 
+    public Message(Chat chat){
+        text = null;
+        this.chat = chat;
+    }
     public Message(int message_id, From from, Chat chat, int date, String text) {
         this.message_id = message_id;
         this.from = from;
