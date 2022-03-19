@@ -10,7 +10,7 @@ package xmlparser;
  */
 public class Place {
 
-    private String city, county, state, postcode, country, country_code;
+    private String city, county, state, postcode, country, country_code, lat, lon;
 
     public Place() {
         city = "";
@@ -19,8 +19,27 @@ public class Place {
         postcode = "";
         country = "";
         country_code = "";
+        lat = "";
+        lon = "";
     }
 
+    public String getLat() {
+        return lat;
+    }
+
+    public String getLon() {
+        return lon;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public void setLon(String lon) {
+        this.lon = lon;
+    }
+
+        
     public void setCity(String city) {
         this.city = city;
     }
@@ -68,5 +87,11 @@ public class Place {
     public String getCountry_code() {
         return country_code;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Citta: " + city + "  County: " + county + " State: " + state+ " Postcode: " + postcode+ " Country: " + country+ " CountryCode: " + country_code+ " lat: "+ lat + "Long: " + lon;
+    }
+     
+     
 }

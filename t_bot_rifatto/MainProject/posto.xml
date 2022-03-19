@@ -1,4 +1,4 @@
-<searchresults>
+<searchresults timestamp="Sat, 19 Mar 22 10:33:00 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright" querystring="milano" exclude_place_ids="286263950,283684439,283534286,285507695,5121357,39061929,9361874,26427344,72505579,14681227" more_url="https://nominatim.openstreetmap.org/search/?q=milano&amp;addressdetails=1&amp;exclude_place_ids=286263950%2C283684439%2C283534286%2C285507695%2C5121357%2C39061929%2C9361874%2C26427344%2C72505579%2C14681227&amp;format=xml&amp;accept-language=it-IT%2Cit%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7">
     <place place_id="286263950" osm_type="node" osm_id="62505581" place_rank="16" address_rank="18" boundingbox="45.3041943,45.6241943,9.0296346,9.3496346" lat="45.4641943" lon="9.1896346" display_name="Milano, Milan, Milano, Lombardia, 20122, Italia" class="place" type="city" importance="0.83906520787013" icon="https://nominatim.openstreetmap.org/ui/mapicons//poi_place_city.p.20.png">
         <city>Milano</city>
         <county>Milano</county>

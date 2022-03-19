@@ -2,12 +2,13 @@ package MainProject;
 
 
 import java.io.IOException;
+import java.util.List;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.SAXException;
-import xmlparser.PlaceHandler;
-import xmlparser.SearchResult;
+import xmlparser.Place;
+import xmlparser.StaxParser;
 
 public class Api {
 
@@ -25,12 +26,12 @@ public class Api {
             e.printStackTrace();
         }
         */
-        SAXParserFactory factory = SAXParserFactory.newDefaultInstance();
-        SAXParser saxParser = factory.newSAXParser();
-        PlaceHandler placeHandler = new PlaceHandler();
-        saxParser.parse("posto.xml", placeHandler);
-        SearchResult searchResult = placeHandler.getXmlClasse();
-        System.out.println(searchResult);
+        String fileName = "posto.xml";
+        StaxParser xmlparser = new StaxParser();
+        List<Place> placeList = xmlparser.parseXML(fileName);
+        for (Place place : placeList) {
+            System.out.println(place.toString());
+        }
         
     }
     
