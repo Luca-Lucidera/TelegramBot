@@ -21,7 +21,11 @@ public class StaxParser { //se da un errore, metti questo negli url dell'xml &am
     public StaxParser(){
         
     }
+    
+  //public List<Classe>
     public List<Place> parseXML(String path){
+        
+        //Da sostituire con la classe che mi serve
         List<Place> searchResult = new ArrayList<>();
         Place place = null;
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();

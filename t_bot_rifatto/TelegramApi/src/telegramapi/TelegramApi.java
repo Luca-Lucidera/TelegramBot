@@ -27,20 +27,24 @@ public class TelegramApi {
         JSONObject json;
         JSONArray result;
         
-        String jsonStr = gestore.getStringResponseUrl(urlApi);
-        json = jsParser.getFirstObject(jsonStr);
-        result = json.getJSONArray("result");
+        String jsonStr = gestore.getStringResponseUrl(urlApi); //prendo i messaggi presenti
+        json = jsParser.getFirstObject(jsonStr); //converte il la stringa json in un JSONObject
+        result = json.getJSONArray("result"); //dall'oggetto prendo il vettore result (JSONArray)
         
-        if(result.length() == 0){//se non ci sono messaggi termina l'esecuzione
-            messaggi = new Result[1];
-            messaggi[0] = new Result();
+        if(result.length() == 0){ //se non ci sono messaggi termina l'esecuzione
+            messaggi = new Result[1]; //creo un array di risultati di 1 elemento
+            messaggi[0] = new Result(); //aggiungo un risultato vuoto (update_id = -1)
             return messaggi;
         }
         
-        messaggi = new Result[result.length()];
-        for (int i = 0; i < messaggi.length; i++) {
-            messaggi[i] = getResultJSON(result.getJSONObject(i)); //passo l'array result
+        messaggi = new Result[result.length()]; //creo il vettore di messaggi (Result) della lunghezza dei messaggi
+        
+        //per ogni messaggi vado a parsare l'oggetto Result (da JSONObject a Object)
+        for (int i = 0; i < messaggi.length; i++) { 
+            messaggi[i] = getResultJSON(result.getJSONObject(i)); //passo l'oggetto che sta nel vettore
         }
+        
+        //chiamo le api per dire che ho l'etto fino all'ultimo messaggio (update_id + 1)
         String strRisposta = gestore.getStringResponseUrl(urlApi + "?offset=" + (messaggi[messaggi.length - 1].getUpdate_id() + 1));
         
         return messaggi;
@@ -49,7 +53,7 @@ public class TelegramApi {
     //restituisce tutto il JSON senza l' "OK"
     public Result getResultJSON(JSONObject json) {
         
-        JSONObject message = jsParser.getObjectByKey(json, "message");
+        JSONObject message = jsParser.getObjectByKey(json, "message"); //prendo l'oggetto messaggio
         
         Result result = new Result(
                 jsParser.getInt(json, "update_id"),
@@ -60,20 +64,21 @@ public class TelegramApi {
     
     //restituisce l'oggetto "message" presente nel json
     public Message getMessageJSON(JSONObject json) {
-        String text = jsParser.getString(json, "text");
-        if(text.contains("/citta ")){
-            int indexofText = text.indexOf(" ");
+        String text = jsParser.getString(json, "text"); //vado a prendere il testo
+        if(text.contains("/citta ")){ //controllo se è presente la scritta /citta 
+            int indexofText = text.indexOf(" "); //vado a prendere la posizione dello spazio (quello dopo /citta)
             //il +1 è per non prendere lo spazio
-            text = text.substring(indexofText + 1);
+            text = text.substring(indexofText + 1); //vado a predenre solo la parte della citta
             Message message = new Message(
-                jsParser.getInt(json, "message_id"),
-                getFromJSON(jsParser.getObjectByKey(json, "from")),
-                getChatJSON(jsParser.getObjectByKey(json, "chat")),
-                jsParser.getInt(json, "date"),
-                text
+                jsParser.getInt(json, "message_id"), //message id
+                getFromJSON(jsParser.getObjectByKey(json, "from")), //Oggetto "From"
+                getChatJSON(jsParser.getObjectByKey(json, "chat")), //Oggetto "Chat"
+                jsParser.getInt(json, "date"), //data
+                text //testo
             );
             return message;
         }else{
+            //se non ha scritto /citta allora vado l'oggetto Chat e poi lo ritorno (per mandare poi una risposta, il campo text = null)
             return new Message(getChatJSON(jsParser.getObjectByKey(json, "chat"))); //se il comando non è /citta allora ritorna null
         }
     }

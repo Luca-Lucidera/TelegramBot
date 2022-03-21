@@ -6,7 +6,7 @@ import org.json.*;
  *
  * @author lucid
  */
-public class JsonParser {
+public class JsonParser { //classe assolutamente inutile fatta per sport
     public void JsonParser(){}
 
     public JSONObject getFirstObject(String jsonStr){

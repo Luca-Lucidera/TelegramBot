@@ -26,11 +26,14 @@ public class TimerTelegramRequest extends TimerTask {
         try {
             //prendo i messaggi
             Result[] messaggi = telegram.getMessaggio("https://api.telegram.org/bot5260523883:AAGBdOFDWUl1_Enq4SYqbsVqxDrF5HqqXoM/getUpdates");
+            
             //controllo per vedere se ci sono nuovi messaggi
             if (messaggi[0].getUpdate_id() == -1) {
                 System.out.println("Nessun messaggio presente!");
             } else {
+                //ciclo per prendere ogni messaggio
                 for (int i = 0; i < messaggi.length; i++) {
+                    
                     //controllo del comando "/citta "
                     if (messaggi[i].getMessage().getText() == null) {
                         int chat_id = messaggi[i].getMessage().getChat().getId();

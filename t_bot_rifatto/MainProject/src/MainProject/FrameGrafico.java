@@ -133,7 +133,8 @@ public class FrameGrafico extends javax.swing.JFrame {
                 double lon = Double.parseDouble(userDetail[2]);
                 double distanzaMetri = distance(lat, latPub, lon, longPub, 0, 0);
                 double distanzaKm = distanzaMetri/1000;
-                if(distanzaKm <= 15){
+                System.out.println("Distanza in km: " + distanzaKm);
+                if(distanzaKm <= 30){
                     telegram.sendMessage(
                                 "https://api.telegram.org/bot5260523883:AAGBdOFDWUl1_Enq4SYqbsVqxDrF5HqqXoM/sendMessage?chat_id=",
                                 chat_id,

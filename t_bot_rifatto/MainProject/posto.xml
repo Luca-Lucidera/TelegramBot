@@ -1,9 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<searchresults timestamp='Mon, 21 Mar 22 08:50:42 +0000' attribution='Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright' querystring='cesano maderno' exclude_place_ids='284371675,80697127,1008511,33729040,79744975,330694368,17774371' more_url='https://nominatim.openstreetmap.org/search/?q=cesano+maderno&amp;addressdetails=1&amp;exclude_place_ids=284371675%2C80697127%2C1008511%2C33729040%2C79744975%2C330694368%2C17774371&amp;format=xml'>
-<place place_id='284371675' osm_type='relation' osm_id='45557' place_rank='16' address_rank='16' boundingbox="45.614467,45.6435594,9.1084885,9.1907668" lat='45.6281892' lon='9.1462397' display_name='Cesano Maderno, Monza e della Brianza, Lombardia, 20811, Italia' class='boundary' type='administrative' importance='0.66065317562571' icon='https://nominatim.openstreetmap.org/ui/mapicons//poi_boundary_administrative.p.20.png'>
-<town>Cesano Maderno</town><county>Monza e della Brianza</county><state>Lombardia</state><postcode>20811</postcode><country>Italia</country><country_code>it</country_code></place><place place_id='80697127' osm_type='node' osm_id='7785902311' place_rank='30' address_rank='30' boundingbox="45.6257279,45.6357279,9.1370795,9.1470795" lat='45.6307279' lon='9.1420795' display_name='Cesano Maderno, Via Santo Stefano, Binzago, Cesano Maderno, Monza e della Brianza, Lombardia, 20811, Italia' class='railway' type='station' importance='0.48683474296462' icon='https://nominatim.openstreetmap.org/ui/mapicons//transport_train_station2.p.20.png'>
-<railway>Cesano Maderno</railway><road>Via Santo Stefano</road><suburb>Binzago</suburb><town>Cesano Maderno</town><county>Monza e della Brianza</county><state>Lombardia</state><postcode>20811</postcode><country>Italia</country><country_code>it</country_code></place><place place_id='1008511' osm_type='node' osm_id='310397304' place_rank='30' address_rank='30' boundingbox="45.6271806,45.6272806,9.1637479,9.1638479" lat='45.6272306' lon='9.1637979' display_name='Cesano Maderno, Strada provinciale ex strada statale 35 nord dei Giovi, Liate, Cascina Gaeta, Cesano Maderno, Monza e della Brianza, Lombardia, 20811, Italia' class='highway' type='motorway_junction' importance='0.201'>
-<highway>Cesano Maderno</highway><road>Strada provinciale ex strada statale 35 nord dei Giovi</road><neighbourhood>Liate</neighbourhood><hamlet>Cascina Gaeta</hamlet><town>Cesano Maderno</town><county>Monza e della Brianza</county><state>Lombardia</state><postcode>20811</postcode><country>Italia</country><country_code>it</country_code></place><place place_id='33729040' osm_type='node' osm_id='2874439984' place_rank='30' address_rank='30' boundingbox="45.6254279,45.6255279,9.1456973,9.1457973" lat='45.6254779' lon='9.1457473' display_name='Cesano Maderno, 2, Piazza Venticinque Aprile, Binzago, Cesano Maderno, Monza e della Brianza, Lombardia, 20811, Italia' class='amenity' type='post_office' importance='0.201' icon='https://nominatim.openstreetmap.org/ui/mapicons//amenity_post_office.p.20.png'>
-<amenity>Cesano Maderno</amenity><house_number>2</house_number><road>Piazza Venticinque Aprile</road><suburb>Binzago</suburb><town>Cesano Maderno</town><county>Monza e della Brianza</county><state>Lombardia</state><postcode>20811</postcode><country>Italia</country><country_code>it</country_code></place><place place_id='79744975' osm_type='node' osm_id='7785902312' place_rank='30' address_rank='30' boundingbox="45.63104,45.63114,9.1418021,9.1419021" lat='45.63109' lon='9.1418521' display_name='Cesano Maderno, Via don Carlo Gnocchi, Binzago, Cesano Maderno, Monza e della Brianza, Lombardia, 20811, Italia' class='railway' type='stop' importance='0.201'>
-<railway>Cesano Maderno</railway><road>Via don Carlo Gnocchi</road><suburb>Binzago</suburb><town>Cesano Maderno</town><county>Monza e della Brianza</county><state>Lombardia</state><postcode>20811</postcode><country>Italia</country><country_code>it</country_code></place><place place_id='330694368' osm_type='node' osm_id='3028152624' place_rank='30' address_rank='30' boundingbox="45.6322555,45.6323555,9.1422911,9.1423911" lat='45.6323055' lon='9.1423411' display_name='Cesano Maderno, Via Alessandro Volta, Binzago, Cesano Maderno, Monza e della Brianza, Lombardia, 20811, Italia' class='railway' type='stop' importance='0.201'>
-<railway>Cesano Maderno</railway><road>Via Alessandro Volta</road><suburb>Binzago</suburb><town>Cesano Maderno</town><county>Monza e della Brianza</county><state>Lombardia</state><postcode>20811</postcode><country>Italia</country><country_code>it</country_code></place></searchresults>
+<searchresults timestamp='Mon, 21 Mar 22 14:34:36 +0000' attribution='Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright' querystring='cantu' exclude_place_ids='284253356,45274111,286295875,69487093,45381315,19616731,84295544,15136170,11688412,102978391' more_url='https://nominatim.openstreetmap.org/search/?q=cantu&amp;addressdetails=1&amp;exclude_place_ids=284253356%2C45274111%2C286295875%2C69487093%2C45381315%2C19616731%2C84295544%2C15136170%2C11688412%2C102978391&amp;format=xml'>
+    <place place_id='284253356' osm_type='relation' osm_id='45858' place_rank='16' address_rank='16' boundingbox="45.7075069,45.7679634,9.0950562,9.1733317" lat='45.7395347' lon='9.129103' display_name='Cantù, Como, Lombardia, 22063, Italia' class='boundary' type='administrative' importance='0.51982283455522' icon='https://nominatim.openstreetmap.org/ui/mapicons//poi_boundary_administrative.p.20.png'>
+        <town>Cantù</town>
+        <county>Como</county>
+        <state>Lombardia</state>
+        <postcode>22063</postcode>
+        <country>Italia</country>
+        <country_code>it</country_code>
+    </place>
+    <place place_id='45274111' osm_type='node' osm_id='3748468079' place_rank='19' address_rank='18' boundingbox="-9.5696263,-9.5296263,-77.7020417,-77.6620417" lat='-9.5496263' lon='-77.6820417' display_name='Cantu, Pira, Huaraz, Ancash, Perú' class='place' type='village' importance='0.375' icon='https://nominatim.openstreetmap.org/ui/mapicons//poi_place_village.p.20.png'>
+        <village>Cantu</village>
+        <region>Huaraz</region>
+        <state>Ancash</state>
+        <country>Perú</country>
+        <country_code>pe</country_code>
+    </place>
+    <place place_id='286295875' osm_type='node' osm_id='151365021' place_rank='20' address_rank='20' boundingbox="26.2959034,26.3359034,-98.3286262,-98.2886262" lat='26.3159034' lon='-98.3086262' display_name='Cantu, Hidalgo County, Texas, 78305, United States' class='place' type='hamlet' importance='0.35' icon='https://nominatim.openstreetmap.org/ui/mapicons//poi_place_village.p.20.png'>
+        <hamlet>Cantu</hamlet>
+        <county>Hidalgo County</county>
+        <state>Texas</state>
+        <postcode>78305</postcode>
+        <country>United States</country>
+        <country_code>us</country_code>
+    </place>
+    <place place_id='69487093' osm_type='node' osm_id='6390228108' place_rank='20' address_rank='20' boundingbox="-9.5446502,-9.5046502,-77.5232705,-77.4832705" lat='-9.5246502' lon='-77.5032705' display_name='Cantu, Unchus, Independencia, Huaraz, Ancash, 034, Perú' class='place' type='hamlet' importance='0.35' icon='https://nominatim.openstreetmap.org/ui/mapicons//poi_place_village.p.20.png'>
+        <hamlet>Cantu</hamlet>
+        <village>Unchus</village>
+        <city>Independencia</city>
+        <region>Huaraz</region>
+        <state>Ancash</state>
+        <postcode>034</postcode>
+        <country>Perú</country>
+        <country_code>pe</country_code>
+    </place>
+    <place place_id='45381315' osm_type='node' osm_id='3791828183' place_rank='20' address_rank='20' boundingbox="-9.7210144,-9.6810144,-77.4654033,-77.4254033" lat='-9.7010144' lon='-77.4454033' display_name='Cantu, Recuay, Ancash, Perú' class='place' type='hamlet' importance='0.35' icon='https://nominatim.openstreetmap.org/ui/mapicons//poi_place_village.p.20.png'>
+        <hamlet>Cantu</hamlet>
+        <town>Recuay</town>
+        <region>Recuay</region>
+        <state>Ancash</state>
+        <country>Perú</country>
+        <country_code>pe</country_code>
+    </place>
+    <place place_id='19616731' osm_type='node' osm_id='2284141274' place_rank='16' address_rank='16' boundingbox="42.6249814,42.9449814,123.9454335,124.2654335" lat='42.7849814' lon='124.1054335' display_name='昌图县, 铁岭市, 辽宁省, 中国' class='place' type='city' importance='0.26005838404069' icon='https://nominatim.openstreetmap.org/ui/mapicons//poi_place_city.p.20.png'>
+        <city>昌图县</city>
+        <county>昌图县</county>
+        <region>铁岭市</region>
+        <state>辽宁省</state>
+        <country>中国</country>
+        <country_code>cn</country_code>
+    </place>
+    <place place_id='84295544' osm_type='node' osm_id='8376501555' place_rank='20' address_rank='22' boundingbox="45.7993482,45.8193482,9.8412562,9.8612562" lat='45.8093482' lon='9.8512562' display_name='Cantù, Semonte, Vertova, Bergamo, Lombardia, 24029, Italia' class='place' type='neighbourhood' importance='0.25'>
+        <neighbourhood>Cantù</neighbourhood>
+        <hamlet>Semonte</hamlet>
+        <village>Vertova</village>
+        <county>Bergamo</county>
+        <state>Lombardia</state>
+        <postcode>24029</postcode>
+        <country>Italia</country>
+        <country_code>it</country_code>
+    </place>
+    <place place_id='15136170' osm_type='node' osm_id='1649491405' place_rank='20' address_rank='20' boundingbox="46.1083066,46.1483066,9.8162683,9.8562683" lat='46.1283066' lon='9.8362683' display_name='Cantù, Albosaggia, Comunità montana della Valtellina di Sondrio, Sondrio, Lombardia, 23010, Italia' class='place' type='hamlet' importance='0.25' icon='https://nominatim.openstreetmap.org/ui/mapicons//poi_place_village.p.20.png'>
+        <hamlet>Cantù</hamlet>
+        <village>Albosaggia</village>
+        <municipality>Comunità montana della Valtellina di Sondrio</municipality>
+        <county>Sondrio</county>
+        <state>Lombardia</state>
+        <postcode>23010</postcode>
+        <country>Italia</country>
+        <country_code>it</country_code>
+    </place>
+    <place place_id='11688412' osm_type='node' osm_id='1242818984' place_rank='25' address_rank='25' boundingbox="43.3093368,43.3293368,-5.9946197,-5.9746197" lat='43.3193368' lon='-5.9846197' display_name='Cantu, Pedregal, Oviedo, Asturias / Asturies, 33119, España' class='place' type='locality' importance='0.225' icon='https://nominatim.openstreetmap.org/ui/mapicons//poi_place_village.p.20.png'>
+        <locality>Cantu</locality>
+        <hamlet>Pedregal</hamlet>
+        <city>Oviedo</city>
+        <state_district>Asturias / Asturies</state_district>
+        <state>Asturias / Asturies</state>
+        <postcode>33119</postcode>
+        <country>España</country>
+        <country_code>es</country_code>
+    </place>
+    <place place_id='102978391' osm_type='way' osm_id='17330136' place_rank='26' address_rank='26' boundingbox="31.823713,31.8268398,-106.1606551,-106.160599" lat='31.824862' lon='-106.160599' display_name='Cantu, Fern Village Number 1 Colonia, El Paso County, Texas, 79938, United States' class='highway' type='residential' importance='0.2'>
+        <road>Cantu</road>
+        <hamlet>Fern Village Number 1 Colonia</hamlet>
+        <county>El Paso County</county>
+        <state>Texas</state>
+        <postcode>79938</postcode>
+        <country>United States</country>
+        <country_code>us</country_code>
+    </place>
+</searchresults>
