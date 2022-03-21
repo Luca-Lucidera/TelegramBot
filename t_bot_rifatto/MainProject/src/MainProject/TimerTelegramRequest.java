@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package MainProject;
 
 import gestoreurl.GestoreUrl;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import java.util.TimerTask;
@@ -47,13 +43,11 @@ public class TimerTelegramRequest extends TimerTask {
                         String citta = messaggi[i].getMessage().getText();
 
                         String apiMappe = "https://nominatim.openstreetmap.org/search?q=";
-                        String param = gestore.getParamFormatted(citta);
-                        String url = apiMappe + param + "&format=xml&addressdetails=1";
-                        String strXml = gestore.getStringResponseUrl(url);
+
                         //questo serve per non fare esplodere i link http dentro all'xml
-                        strXml.replace("&", "&&amp;");
+                        String mappeXml = getMeppe(apiMappe, citta);
                         String path = "posto.xml";
-                        scriviFile(path, strXml);
+                        scriviFile(path, mappeXml);
                         List<Place> places = xmlParser.parseXML(path);
                         if (!places.get(0).getCountry_code().equals("it")) {
                             telegram.sendMessage(
@@ -77,6 +71,14 @@ public class TimerTelegramRequest extends TimerTask {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public String getMeppe(String api, String citta) throws IOException {
+        String param = gestore.getParamFormatted(citta);
+        String url = api + param + "&format=xml&addressdetails=1";
+        String strXml = gestore.getStringResponseUrl(url);
+        strXml.replace("&", "&&amp;");
+        return strXml;
     }
 
     public void scriviFileAppend(String fileName, String text) throws FileNotFoundException {
