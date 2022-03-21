@@ -14,6 +14,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import telegramapi.TelegramApi;
 
 /**
  *
@@ -117,6 +118,7 @@ public class FrameGrafico extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
+            TelegramApi telegram = new TelegramApi();
             Double latPub = Double.parseDouble(LatPub.getText());
             Double longPub = Double.parseDouble(LongPub.getText());
             String nomePubb = NamePub.getText();
@@ -126,10 +128,17 @@ public class FrameGrafico extends javax.swing.JFrame {
             for (int i = 0; i < rows.length; i++) {
                 //chat_id;lat;lon;
                 String[] userDetail = rows[i].split(";");
-                Double lat = Double.parseDouble(userDetail[1]);
-                Double lon = Double.parseDouble(userDetail[2]);
+                int chat_id = Integer.parseInt(userDetail[0]);
+                double lat = Double.parseDouble(userDetail[1]);
+                double lon = Double.parseDouble(userDetail[2]);
                 double distanzaMetri = distance(lat, latPub, lon, longPub, 0, 0);
-                System.out.println("Distanza km: " + distanzaMetri/1000);
+                double distanzaKm = distanzaMetri/1000;
+                if(distanzaKm <= 15){
+                    telegram.sendMessage(
+                                "https://api.telegram.org/bot5260523883:AAGBdOFDWUl1_Enq4SYqbsVqxDrF5HqqXoM/sendMessage?chat_id=",
+                                chat_id,
+                                "Pubblicità: " + nomePubb);
+                }
             }
         } catch (IOException ex) {
             Logger.getLogger(FrameGrafico.class.getName()).log(Level.SEVERE, null, ex);
